@@ -3,10 +3,12 @@ class Person {
 
     logAge () {
         // Log out the object's age
+        console.log("35",this);
     }
 
     logAgeArrow = () => {
         // Log out the object's age
+        console.log("35",this)
     }
 }
 

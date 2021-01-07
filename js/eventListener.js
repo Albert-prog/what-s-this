@@ -6,7 +6,7 @@ function init() {
 
 function logButtonAsArrowFunction(button) {
     button.addEventListener("click", (event) => {
-        console.log("Arrow function output");
+        console.log("Arrow function output", this);
         // Log out the button element
     });
 }
@@ -16,7 +16,7 @@ function logButtonAsDeclaredFunction(button) {
 }
 
 function clickHandler() {
-    console.log("Declared function output");
+    console.log("Declared function output", this);
     // Log out the button element
 }
 
