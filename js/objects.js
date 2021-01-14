@@ -9,9 +9,9 @@ const person = {
 }
 
 function logReferenceObjectsAge() {
-    const logAge = person.logAge;
-    //logAge();
-    logAge.call(person);
+    const logAge = person.logAge.bind(person);
+    logAge();
+    //logAge.call(person);
 }
 
 console.log("Object's function call");

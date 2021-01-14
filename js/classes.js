@@ -15,9 +15,17 @@ class Person {
 
 const object = new Person();
 
+const defaultfunction = object.logAge.bind(object); 
+const ArrowFunction = object.logAgeArrow;
+
 console.log("Simple function declaration in class");
+defaultfunction();
+console.log("Arrow function declaration in class");
+ArrowFunction();
+
+/* 
 const defaultfunction = object.logAge;
 defaultfunction.call(object);//meghívom a változó értékét
-console.log("Arrow function declaration in class");
 const ArrowFunction = object.logAgeArrow;
-ArrowFunction();//meghívom a változót
+ArrowFunction();//meghívom a változót 
+*/
