@@ -1,31 +1,21 @@
 class Person {
-    age = 35
+	constructor() {
+		this.logAge = this.logAge(this);
+	}
+	age = 35;
 
-    logAge () {
-        // Log out the object's age
-        console.log(this.age);
-    }
+	logAge() {
+		// Log out the object's age
+		console.log(this.age);
+	}
 
-
-    logAgeArrow = () => {
-        // Log out the object's age
-        console.log(this.age);
-    }
+	logAgeArrow = () => {
+		// Log out the object's age
+		console.log(this.age);
+	};
 }
 
 const object = new Person();
+console.log("Simple function declaration in class = logAge");
 
-const defaultfunction = object.logAge.bind(object); 
-const ArrowFunction = object.logAgeArrow;
-
-console.log("Simple function declaration in class");
-defaultfunction();
-console.log("Arrow function declaration in class");
-ArrowFunction();
-
-/* 
-const defaultfunction = object.logAge;
-defaultfunction.call(object);//meghívom a változó értékét
-const ArrowFunction = object.logAgeArrow;
-ArrowFunction();//meghívom a változót 
-*/
+console.log("Arrow function declaration in class = logAgeArrow");

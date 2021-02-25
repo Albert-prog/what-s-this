@@ -1,27 +1,21 @@
 function init() {
-    const button = document.querySelector(".click-btn");
-    logButtonAsArrowFunction(button);
-    logButtonAsDeclaredFunction(button);
+	const button = document.querySelector(".click-btn");
+	logButtonAsArrowFunction(button);
+	logButtonAsDeclaredFunction(button);
 }
 
 function logButtonAsArrowFunction(button) {
-    button.addEventListener("click", (event) => {
-        console.log("Arrow function output", );
-        // Log out the button element
-        //console.log(button);
-        console.log(event.target);
-        // események átruházása
-    });
+	button.addEventListener("click", (event) => {
+		console.log(event.target);
+	});
 }
 
 function logButtonAsDeclaredFunction(button) {
-    button.addEventListener("click", clickHandler);
+	button.addEventListener("click", clickHandler);
 }
 
 function clickHandler() {
-    console.log("Declared function output");
-    // Log out the button element
-    console.log(this);
+	console.log(this);
 }
 
-init()
+init();
